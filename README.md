@@ -105,40 +105,6 @@ cd WeCook
 
 ```
 
-### 2. Create and Activate a Virtual Environment
-
-```bash
-# On Linux / macOS:
-python3 -m venv venv
-source venv/bin/activate
-
-# On Windows (Command Prompt):
-python -m venv venv
-venv\Scripts\activate.bat
-
-# On Windows (PowerShell):
-python -m venv venv
-venv\Scripts\Activate.ps1
-
-```
-
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-
-```
-
-*(If `requirements.txt` is not yet populated, install the core dependencies directly:)*
-
-```bash
-pip install requests pydantic pytest
-
-```
-
----
-
-## Running the Project
 
 ### Interactive CLI Mode
 
@@ -149,23 +115,6 @@ python interactive_cli.py
 
 ```
 
-### Running Local Pipeline Tests
-
-Run the end-to-end integration and mock degradation test suite:
-
-```bash
-pytest tests/ -v
-
-```
-
-Or run Python's built-in unittest framework:
-
-```bash
-python -m unittest discover tests/
-
-```
-
----
 
 ## Project Structure
 
@@ -196,15 +145,7 @@ WeCook/
 
 ---
 
-## API Details & Integrations
 
-| Data Source | Type | Purpose | Degradation Behavior Handled |
-| --- | --- | --- | --- |
-| **Transaction Feed** | REST Endpoint | Ingests paginated transaction logs | Field renames (`txn_amt`, `ts`), missing/null values |
-| **Exchange Rates** | REST API | Multi-currency conversions to INR | Stale rates, unknown auxiliary keys |
-| **Merchant Categories** | Static Local JSON | Categorizes raw merchant strings | Unmatched entities fallback to `Unknown/Other` |
-
----
 
 ## Known Limitations
 
