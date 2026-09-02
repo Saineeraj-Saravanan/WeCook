@@ -1,4 +1,4 @@
-# ScamShield — AI-Powered Investment Scam & Ponzi Scheme Detector
+# WeCook — Investment Scam Detector
 
 **Track:** FinTech — Agent Colosseum
 
